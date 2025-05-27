@@ -1,0 +1,585 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+body {
+  margin: 0px;
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+}
+
+.container-principal-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  gap: 41px;
+}
+.container-principal-logo .hamburger {
+  display: none;
+}
+.container-principal-logo .logo {
+  height: 57px;
+}
+.container-principal-logo .logo img {
+  width: 90%;
+  height: 90%;
+}
+.container-principal-logo .container-nav {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  gap: 41px;
+}
+.container-principal-logo .container-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+}
+.container-principal-logo .container-nav :hover {
+  color: #10B2B2;
+}
+.container-principal-logo .container-nav .active {
+  border: 3px solid #10B2B2;
+  border-radius: 22px;
+  padding: 6px;
+  color: #10B2B2;
+}
+
+.container-header {
+  background-image: url(img/img-banner.png);
+  width: 100%;
+  max-width: 1924px;
+  height: 670px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+}
+.container-header .button-comprar button {
+  width: 210px;
+  height: 50px;
+  border: 5px solid #FFFFFF;
+  border-radius: 35px;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.9490196078);
+  font-size: 27px;
+  background: none;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.9490196078);
+  font-weight: 600;
+}
+.container-header .button-comprar {
+  position: absolute;
+  text-align: center;
+  bottom: 39px;
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.borde-color-banner {
+  border-top: 20px solid #066D6A;
+}
+.borde-color-banner .container-total-numeros {
+  background-color: #10B2B2;
+}
+.borde-color-banner .total-numeros h1 {
+  margin: 0px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  padding: 30px;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+.progress-container .progress-percentage {
+  font-size: 37px;
+  color: #10B2B2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.progress-container .progress-bar-wrapper {
+  flex: 1;
+  background-color: #ddd;
+  border-radius: 999px;
+  padding: 8px;
+}
+.progress-container .progress-bar {
+  width: 100%;
+}
+.progress-container .progress-bar-fill {
+  background-color: #00a5a5;
+  height: 30px;
+  width: 10%;
+  border-radius: 999px;
+}
+
+.fecha-sorteo {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+.fecha-sorteo p {
+  color: #4D4D4D;
+  font-size: 17px;
+  margin: 0px;
+  padding: 0px 85px 30px;
+  font-weight: 500;
+}
+
+.container-oportunidades {
+  background-image: url(img/bn-oportunidades.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container-oportunidades .title-oportunidades h1 {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 55px 30px;
+  margin: 0px;
+}
+.container-oportunidades .contenido-oportunidades {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.container-oportunidades .card-plata,
+.container-oportunidades .card-oro,
+.container-oportunidades .card-diamante {
+  background: #f6f6f6;
+  border-radius: 12px;
+  width: 220px;
+  padding: 20px 0px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.container-oportunidades .badge {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container-oportunidades .badge img {
+  width: 55px;
+  height: 55px;
+}
+.container-oportunidades .title {
+  color: #00b7bd;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px 0;
+}
+.container-oportunidades .cantidad {
+  font-size: 37px;
+  font-weight: bold;
+  color: #4D4D4D;
+}
+.container-oportunidades .precio {
+  background: #10B2B2;
+  color: white;
+  padding: 10px;
+  font-size: 31px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.container-oportunidades .btn-comprar {
+  border: 3px solid #10B2B2;
+  border-radius: 38px;
+  padding: 8px 20px;
+  color: #00b7bd;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+}
+.container-footer .contenido-footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.container-footer .title-footer {
+  color: #10B2B2;
+  font-size: 20px;
+  margin: 50px 0px 10px;
+}
+.container-footer .img-medios-pago img {
+  width: 290px;
+}
+.container-footer .first-content,
+.container-footer .content-contact,
+.container-footer .content-medios-pago {
+  width: 280px;
+  color: #4D4D4D;
+}
+.container-footer .contenido {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.container-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #2D2D2D;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 20px 0px;
+  gap: 50px;
+}
+.container-copyright p {
+  font-size: 14px;
+  margin: 0px;
+}
+.container-copyright .container-politicas {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.container-copyright .container-politicas a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.container-copyright .container-politicas a:hover {
+  text-decoration: underline;
+  color: #10B2B2;
+  font-weight: 700;
+}
+
+.copyright {
+  width: 100%;
+  max-width: 400px;
+}
+.copyright a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.copyright a:hover {
+  text-decoration: underline;
+  color: #10B2B2;
+  font-weight: 700;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  display: none;
+}
+
+.modal-overlay.active {
+  display: flex;
+  border: 1px solid #707070;
+  opacity: 1;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 452px;
+  padding: 20px;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0px 2px 12px 0px rgba(27, 27, 27, 0.15);
+}
+
+.modal-header {
+  background-color: #10B2B2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: -20px -20px 20px -20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: white;
+  border-radius: 5px;
+  border: none;
+  width: 26px;
+  height: 26px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  gap: 5px;
+}
+
+.contacto-container img {
+  width: 25px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #4D4D4D;
+}
+
+.total-box {
+  color: #4D4D4D;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.checkbox {
+  display: flex;
+  align-items: baseline;
+  margin: 10px 0;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+.pay-btn {
+  background: #ffffff;
+  color: #4D4D4D;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  border: 2px solid #4D4D4D;
+  cursor: pointer;
+  font-size: 16px;
+  width: 138px;
+  margin: 0 auto;
+}
+
+.pay-btn:hover {
+  background: #333;
+  color: #ffffff;
+}
+
+.input-icon {
+  background-color: #00b2b2;
+  /* turquesa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  font-size: 14px;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.input-icon {
+  background-color: #00b2b2;
+  /* turquesa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.input-icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  /* convierte el ícono a blanco */
+}
+
+.input-group select {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  font-size: 14px;
+  background-color: white;
+  color: #4D4D4D;
+  padding-left: 0px;
+}
+
+.total-oportunidades {
+  padding-top: 5px;
+}
+.total-oportunidades input {
+  width: 98%;
+  max-width: 438px;
+  height: 28px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+}
+
+input[type=number] {
+  padding-left: 10px;
+  color: #4D4D4D;
+  font-size: 16px;
+}
+
+@media (max-width: 679px) {
+  .container-header {
+    background-image: url(img/banner-celular.jpg) !important;
+    background-size: cover;
+    height: 360px;
+  }
+  .container-header .button-comprar button {
+    width: 170px;
+    height: 44px;
+    font-size: 22px;
+  }
+  .progress-container {
+    display: block;
+  }
+  .progress-container .progress-percentage {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .container-oportunidades .contenido-oportunidades {
+    display: grid;
+  }
+  .fecha-sorteo p {
+    padding: 0px 25px 30px;
+  }
+  .borde-color-banner .total-numeros h1 {
+    font-size: 26px;
+    padding: 20px 0px;
+  }
+  .container-footer .contenido-footer {
+    display: block;
+    justify-content: center;
+  }
+  .progress-container .progress-bar-wrapper {
+    margin: 0px 20px;
+  }
+  .container-oportunidades .title-oportunidades h1 {
+    font-size: 26px;
+  }
+  .container-copyright .container-politicas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .container-copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 12px;
+  }
+  .copyright p {
+    padding-bottom: 10px;
+  }
+  .modal {
+    width: 100%;
+    max-width: 330px;
+  }
+  .container-principal-logo {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .container-principal-logo .logo img {
+    width: auto;
+    height: 90%;
+  }
+  .hamburger {
+    display: block !important;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .container-principal-logo .container-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .container-nav.active {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

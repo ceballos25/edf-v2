@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ESTILOS LOGO -->
+
+    <div class="container-principal-logo">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <!-- <button class="hamburger" aria-label="Abrir menú">
+            ☰
+        </button> -->
+
+        <nav class="container-nav">
+            <div><a href="#" rel="noopener noreferrer">INICIO</a></div>
+            <div><a href="#" rel="noopener noreferrer">NÚMEROS</a></div>
+            <div><a href="#" rel="noopener noreferrer">METODOLOGÍA</a></div>
+        </nav>
+    </div>
+
+
+    <!-- ESTILOS HEADER -->
+
+    <div class="container-header">
+        <div class="button-comprar btn-comprar">
+            <button>COMPRAR</button>
+        </div>
+    </div>
+
+
+    <!-- TOTAL NÚMEROS VENDIDOS -->
+
+    <div class="container-prinicpa-number-vendid">
+        <div class="borde-color-banner">
+            <div class="container-total-numeros">
+                <div class="total-numeros">
+                    <h1>TOTAL NÚMEROS VENDIDOS</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- BARRA -->
+
+        <div class="progress-container">
+            <div class="progress-percentage">10%</div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fecha-sorteo">
+            <p>Daremos la fecha del sorteo cuando alcancemos el 60% de los números vendidos Juega por las 4 cifras de la
+                de Medellín</p>
+        </div>
+    </div>
+
+    <!-- PAQUETE DE OPORTUNIDADES -->
+
+    <div class="container-oportunidades">
+        <div class="title-oportunidades">
+            <h1>PAQUETE DE OPORTUNIDADES</h1>
+        </div>
+        <div class="contenido-oportunidades">
+            <div class="card-plata">
+                <div class="badge"><img src="img/logo-plata.png" alt=""></div>
+                <div class="title">PLATA</div>
+                <div class="cantidad">2x</div>
+                <div class="precio">$8.000</div>
+                <button class="btn-comprar">COMPRAR</button>
+            </div>
+
+            <div class="card-oro">
+                <div class="badge"><img src="img/logo-oro.png" alt=""></div>
+                <div class="title">ORO</div>
+                <div class="cantidad">5x</div>
+                <div class="precio">$20.000</div>
+                <button class="btn-comprar">COMPRAR</button>
+            </div>
+
+            <div class="card-diamante">
+                <div class="badge"><img src="img/logo-diamante.png" alt=""></div>
+                <div class="title">DIAMANTE</div>
+                <div class="cantidad">10x</div>
+                <div class="precio">$40.000</div>
+                <button class="btn-comprar">COMPRAR</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- MODAL COMPRA -->
+
+    <div class="container-modal">
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <div class="modal-header">
+                    DATOS DE COMPRA
+                    <button class="close-btn" id="closeModal">&times;</button>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=83190&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <input type="text" placeholder="Nombre completo">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <input type="text" placeholder="Celular">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <input type="email" placeholder="Correo">
+
+                        </div>
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=7891&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <select>
+                                <option>Departamento</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=7891&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <select>
+                                <option>Ciudad</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=8851&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <select>
+                                <option>3 x $12.000</option>
+                                <option value="2">2x $8.000</option>
+                                <option value="5">5x $20.000</option>
+                                <option value="10">10x $40.000</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="full-width">
+                        <label>Total de oportunidades</label>
+                        <div class="total-oportunidades">
+                            <input type="number" value="3" readonly>
+
+                        </div>
+                    </div>
+
+                    <div class="full-width">
+                        <label>Total a pagar</label>
+                        <div class="total-oportunidades">
+                            <div class="total-box">$12.000</div>
+
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" checked>
+                        <label>Acepto las Políticas de privacidad y Términos y condiciones.</label>
+                    </div>
+
+                    <button type="button" class="pay-btn">PAGAR</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container-footer">
+        <div class="contenido-footer">
+            <div class="first-content">
+                <p class="title-footer">EL DIAMANTE DE LA FORTUNA</p>
+                <p class="contenido">Tu pasión sobre ruedas comienza aquí. <b> ¡Juega, gana y acelera!</b></p>
+            </div>
+            <div class="content-contact">
+                <p class="title-footer">Contacto</p>
+                <div class="contacto-container">
+                    <div>
+                        <img src="https://img.icons8.com/?size=100&id=9659&format=png&color=000000" alt="">
+                    </div>
+                    <div>
+                        <p class="contenido"> +57 324 578 4636</p>
+                    </div>
+
+                </div>
+                <div class="contacto-container">
+                    <div>
+                        <img src="https://img.icons8.com/?size=100&id=12580&format=png&color=000000" alt="">
+                    </div>
+                    <div>
+                        <p class="contenido"> ventas@eldiamantedelafortuna.com</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="content-medios-pago">
+                <p class="title-footer">Medios de Pago</p>
+                <p class="img-medios-pago"><img src="img/medios-pago.png" alt=""></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="container-copyright">
+        <div class="copyright">
+            <p>Copyright © 2023 El Diamante de la Fortuna. Todos los derechos reservados.</p>
+            <a href="https://ccceballos30.github.io/ccceballos30/" target="_blank"
+                rel="noopener noreferrer">Desarrollado por: Cristian Ceballos</a>
+        </div>
+        <div class="container-politicas">
+            <div class="terminos">
+                <a href="https://eldiamantedelafortuna.com/docs/hd.pdf" target="_blank"
+                    rel="noopener noreferrer">Términos y condiciones</a>
+
+            </div>
+            <div class="politica-privacidad">
+                <a href="https://eldiamantedelafortuna.com/docs/tyc.pdf" target="_blank"
+                    rel="noopener noreferrer">Política de privacidad</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
