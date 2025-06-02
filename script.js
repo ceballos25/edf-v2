@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const paymentForm = document.querySelector('form[action="functions/mercado-pago/process-pay.php"]');
 
     if (paymentForm) {
-        paymentForm.addEventListener('submit', function(event) {
+        paymentForm.addEventListener('submit', function (event) {
             const requiredFields = [
                 'celular',
                 'nombre',
@@ -46,3 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("El formulario de pago no fue encontrado.");
     }
 });
+// Bloquear scroll en el body
+
+// const closeModal = document.querySelector('button#closeModal');
+// const modalContainer = document.querySelector('.modal-overlay');
+
+// document.body.style.overflow = 'hidden'; // Bloquea scroll (esto sí funciona si está en ejecución)
+
+// closeModal.addEventListener("click", () => {
+//     modalContainer.classList.remove('active');
+//     document.body.style.overflow = ''; // Restaura scroll
+// });
+
+
