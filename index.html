@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>💎 New💎</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <meta name="description"
+        content="Participa en sorteos y rifas para ganar increíbles premios como motos, carros y más. ¡Tu suerte comienza aquí! 🏍️💎">
+    <meta name="keywords"
+        content="rifas, sorteos, sorteo, ganar premios, motos, carros, celulares, sorteos en Colombia, rifas de motos, rifas de carros, premios en efectivo, sorteos online, ganar dinero, rifas económicas, sorteos seguros, el diamante de de fortuna, moto Pulsar NS 200, rifas confiables, sorteos rápidos, rifas populares, premios exclusivos, sorteo, rifa">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="El diamante de la Fortuna">
 </head>
 
 <body>
-
-    <!-- ESTILOS LOGO -->
 
     <div class="container-principal-logo">
         <div class="logo">
             <img src="img/logo.png" alt="Logo">
         </div>
-
-        <!-- Botón hamburguesa -->
-        <!-- <button class="hamburger" aria-label="Abrir menú">
-            ☰
-        </button> -->
-
         <nav class="container-nav">
             <div><a href="#" rel="noopener noreferrer">INICIO</a></div>
             <div><a href="#" rel="noopener noreferrer">NÚMEROS</a></div>
@@ -30,17 +32,11 @@
         </nav>
     </div>
 
-
-    <!-- ESTILOS HEADER -->
-
     <div class="container-header">
         <div class="button-comprar btn-comprar">
             <button>COMPRAR</button>
         </div>
     </div>
-
-
-    <!-- TOTAL NÚMEROS VENDIDOS -->
 
     <div class="container-prinicpa-number-vendid">
         <div class="borde-color-banner">
@@ -50,9 +46,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- BARRA -->
-
         <div class="progress-container">
             <div class="progress-percentage">10%</div>
             <div class="progress-bar-wrapper">
@@ -61,14 +54,11 @@
                 </div>
             </div>
         </div>
-
         <div class="fecha-sorteo">
             <p>Daremos la fecha del sorteo cuando alcancemos el 60% de los números vendidos Juega por las 4 cifras de la
                 de Medellín</p>
         </div>
     </div>
-
-    <!-- PAQUETE DE OPORTUNIDADES -->
 
     <div class="container-oportunidades">
         <div class="title-oportunidades">
@@ -82,7 +72,6 @@
                 <div class="precio">$8.000</div>
                 <button class="btn-comprar">COMPRAR</button>
             </div>
-
             <div class="card-oro">
                 <div class="badge"><img src="img/logo-oro.png" alt=""></div>
                 <div class="title">ORO</div>
@@ -90,7 +79,6 @@
                 <div class="precio">$20.000</div>
                 <button class="btn-comprar">COMPRAR</button>
             </div>
-
             <div class="card-diamante">
                 <div class="badge"><img src="img/logo-diamante.png" alt=""></div>
                 <div class="title">DIAMANTE</div>
@@ -99,11 +87,7 @@
                 <button class="btn-comprar">COMPRAR</button>
             </div>
         </div>
-
-
     </div>
-
-    <!-- MODAL COMPRA -->
 
     <div class="container-modal">
         <div class="modal-overlay" id="modal">
@@ -113,23 +97,27 @@
                     <button class="close-btn" id="closeModal">&times;</button>
                 </div>
 
-                <form>
+                <form novalidate action="functions/mercado-pago/process-pay.php" method="POST">
+
                     <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-icon">
-                                <img src="https://img.icons8.com/?size=100&id=83190&format=png&color=000000"
-                                    alt="icono usuario">
-                            </span>
-                            <input type="text" placeholder="Nombre completo">
-                        </div>
+
                         <div class="input-group">
                             <span class="input-icon">
                                 <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=000000"
                                     alt="icono usuario">
                             </span>
-                            <input type="text" placeholder="Celular">
+                            <input type="tel" id="celular" name="celular" required pattern="^\d{10}$"
+                                placeholder="Celular" aria-label="Celular">
                         </div>
 
+                        <div class="input-group">
+                            <span class="input-icon">
+                                <img src="https://img.icons8.com/?size=100&id=83190&format=png&color=000000"
+                                    alt="icono usuario">
+                            </span>
+                            <input type="text" placeholder="Nombre" aria-label="Nombre" required name="nombre"
+                                id="nombre">
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -138,19 +126,50 @@
                                 <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000"
                                     alt="icono usuario">
                             </span>
-                            <input type="email" placeholder="Correo">
-
+                            <input type="email" class="form-control campo-vacio" placeholder="Correo"
+                                aria-label="Correo" required id="correo" name="email">
                         </div>
                         <div class="input-group">
                             <span class="input-icon">
                                 <img src="https://img.icons8.com/?size=100&id=7891&format=png&color=000000"
                                     alt="icono usuario">
                             </span>
-                            <select>
-                                <option>Departamento</option>
+                            <select name="departamento" id="usp-custom-departamento-de-residencia" required>
+                                <option value="">Departamento..</option>
+                                <option value="ANTIOQUIA">ANTIOQUIA</option>
+                                <option value="AMAZONAS">AMAZONAS</option>
+                                <option value="ARAUCA">ARAUCA</option>
+                                <option value="ATLANTICO">ATLANTICO</option>
+                                <option value="BOLIVAR">BOLIVAR</option>
+                                <option value="BOYACA">BOYACA</option>
+                                <option value="CALDAS">CALDAS</option>
+                                <option value="CAQUETA">CAQUETA</option>
+                                <option value="CASANARE">CASANARE</option>
+                                <option value="CAUCA">CAUCA</option>
+                                <option value="CESAR">CESAR</option>
+                                <option value="CHOCO">CHOCO</option>
+                                <option value="CORDOBA">CORDOBA</option>
+                                <option value="CUNDINAMARCA">CUNDINAMARCA</option>
+                                <option value="GUAINIA">GUAINIA</option>
+                                <option value="GUAVIARE">GUAVIARE</option>
+                                <option value="HUILA">HUILA</option>
+                                <option value="LA GUAJIRA">LA GUAJIRA</option>
+                                <option value="MAGDALENA">MAGDALENA</option>
+                                <option value="META">META</option>
+                                <option value="NARIÑO">NARIÑO</option>
+                                <option value="NORTE DE SANTANDER">NORTE DE SANTANDER</option>
+                                <option value="PUTUMAYO">PUTUMAYO</option>
+                                <option value="QUINDIO">QUINDIO</option>
+                                <option value="RISARALDA">RISARALDA</option>
+                                <option value="SAN ANDRES Y PROVIDENCIA">SAN ANDRES Y PROVIDENCIA</option>
+                                <option value="SANTANDER">SANTANDER</option>
+                                <option value="SUCRE">SUCRE</option>
+                                <option value="TOLIMA">TOLIMA</option>
+                                <option value="VALLE DEL CAUCA">VALLE DEL CAUCA</option>
+                                <option value="VAUPES">VAUPES</option>
+                                <option value="VICHADA">VICHADA</option>
                             </select>
                         </div>
-
                     </div>
 
                     <div class="form-group">
@@ -159,8 +178,8 @@
                                 <img src="https://img.icons8.com/?size=100&id=7891&format=png&color=000000"
                                     alt="icono usuario">
                             </span>
-                            <select>
-                                <option>Ciudad</option>
+                            <select id="usp-custom-municipio-ciudad" name="ciudad" required>
+                                <option selected disabled></option>
                             </select>
                         </div>
 
@@ -169,8 +188,7 @@
                                 <img src="https://img.icons8.com/?size=100&id=8851&format=png&color=000000"
                                     alt="icono usuario">
                             </span>
-                            <select>
-                                <option>3 x $12.000</option>
+                            <select id="select-oportunidades" name="oportunidades" required>
                                 <option value="2">2x $8.000</option>
                                 <option value="5">5x $20.000</option>
                                 <option value="10">10x $40.000</option>
@@ -182,32 +200,35 @@
                     <div class="full-width">
                         <label>Total de oportunidades</label>
                         <div class="total-oportunidades">
-                            <input type="number" value="3" readonly>
-
+                            <input type="number" value=" " class="form-control" id="total-oportunidades"
+                                name="total_numeros" readonly required min="1" />
                         </div>
                     </div>
 
                     <div class="full-width">
                         <label>Total a pagar</label>
-                        <div class="total-oportunidades">
-                            <div class="total-box">$12.000</div>
-
+                        <div class="total-oportunidades-div">
+                            <input type="text" class="form-control" id="total-pago" name="total_pago" readonly
+                                required />
                         </div>
                     </div>
 
                     <div class="checkbox">
-                        <input type="checkbox" checked>
-                        <label>Acepto las Políticas de privacidad y Términos y condiciones.</label>
+                        <input type="checkbox" checked id="politica" required>
+                        <label class="form-check-label" for="politica">
+                            Acepto las <a href="https://eldiamantedelafortuna.com/docs/hd.pdf" target="_blank"
+                                class="politica-modal">Políticas de privacidad</a> y <a
+                                href="https://eldiamantedelafortuna.com/docs/tyc.pdf" target="_blank"
+                                class="politica-modal">Términos y condiciones</a>.
+                        </label>
                     </div>
 
-                    <button type="button" class="pay-btn">PAGAR</button>
+                    <button type="submit" class="pay-btn">PAGAR</button>
                 </form>
-
             </div>
         </div>
     </div>
 
-    <!-- FOOTER -->
     <div class="container-footer">
         <div class="contenido-footer">
             <div class="first-content">
@@ -223,7 +244,6 @@
                     <div>
                         <p class="contenido"> +57 324 578 4636</p>
                     </div>
-
                 </div>
                 <div class="contacto-container">
                     <div>
@@ -232,7 +252,6 @@
                     <div>
                         <p class="contenido"> ventas@eldiamantedelafortuna.com</p>
                     </div>
-
                 </div>
             </div>
             <div class="content-medios-pago">
@@ -241,8 +260,6 @@
             </div>
         </div>
     </div>
-
-    <!-- COPYRIGHT -->
 
     <div class="container-copyright">
         <div class="copyright">
@@ -254,18 +271,20 @@
             <div class="terminos">
                 <a href="https://eldiamantedelafortuna.com/docs/hd.pdf" target="_blank"
                     rel="noopener noreferrer">Términos y condiciones</a>
-
             </div>
             <div class="politica-privacidad">
                 <a href="https://eldiamantedelafortuna.com/docs/tyc.pdf" target="_blank"
                     rel="noopener noreferrer">Política de privacidad</a>
-
             </div>
         </div>
-
     </div>
 
     <script src="script.js"></script>
+    <script src="totalPagar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="departamentos.js"></script>
+    <script src="toastify.js"></script>
 </body>
 
 </html>

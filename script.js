@@ -1,37 +1,48 @@
-// Agregar Active a los buton para las anclas
+document.addEventListener('DOMContentLoaded', () => {
+    const paymentForm = document.querySelector('form[action="functions/mercado-pago/process-pay.php"]');
 
-const links = document.querySelectorAll('.container-nav a');
-links.forEach(link => {
-    link.addEventListener('click', function () {
-        links.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+    if (paymentForm) {
+        paymentForm.addEventListener('submit', function(event) {
+            const requiredFields = [
+                'celular',
+                'nombre',
+                'correo',
+                'usp-custom-departamento-de-residencia',
+                'usp-custom-municipio-ciudad',
+                'select-oportunidades',
+                'total-oportunidades',
+                'total-pago'
+            ];
 
-// ABRIR MODAL
+            let isValid = true;
 
-const buttonComprar = document.querySelectorAll('.btn-comprar');
-const closeModal = document.querySelector('button#closeModal');
-const modalContainer = document.querySelector('.modal-overlay');
-// document.body.style.overflow = 'hidden';
-closeModal.addEventListener("click", () => {
-    modalContainer.classList.remove('active');
-    document.body.style.overflow = '';
-});
+            for (let id of requiredFields) {
+                const field = document.getElementById(id);
+                if (!field || !field.value.trim()) {
+                    isValid = false;
+                    break;
+                }
+            }
 
+            const politica = document.getElementById('politica');
+            if (!politica || !politica.checked) {
+                isValid = false;
+            }
 
-buttonComprar.forEach(button => {
-    button.addEventListener('click', () => {
-        modalContainer.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.container-nav');
-
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
+            if (!isValid) {
+                event.preventDefault();
+                Toastify({
+                    text: "Por favor, completa el formulario.",
+                    duration: 3000,
+                    gravity: "top",
+                    position: "center",
+                    backgroundColor: "#e74c3c",
+                    close: true,
+                    stopOnFocus: true
+                }).showToast();
+            }
+        });
+    } else {
+        console.error("El formulario de pago no fue encontrado.");
+    }
 });
